@@ -1,5 +1,8 @@
 // зробити файл users.html
 // з ендпоінту http://jsonplaceholder.typicode.com/users отримати всіх користувачів
+// вивести їх id + name списком та додати посилання з href = user-details.html?id=XXX (замість ХХХ - айді юзера)
+
+
 
 fetch('http://jsonplaceholder.typicode.com/users ')
     .then(value => value.json())
@@ -25,7 +28,7 @@ fetch('http://jsonplaceholder.typicode.com/users ')
 
 
 
-// вивести їх id + name списком та додати посилання з href = user-details.html?id=XXX (замість ХХХ - айді юзера)
+
 
 
 
