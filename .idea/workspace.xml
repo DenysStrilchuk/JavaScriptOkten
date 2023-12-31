@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8c37d33-9b80-4fd1-9a42-936deb113d6d" name="Changes" comment=" do home-work 12">
+    <list default="true" id="a8c37d33-9b80-4fd1-9a42-936deb113d6d" name="Changes" comment="practise events">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson_12_done_homework/HW12.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_12_done_homework/HW12.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practise_Lesson10(events)/PR10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Practise_Lesson10(events)/PR10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practise_Lesson10(events)/PR10.js" beforeDir="false" afterPath="$PROJECT_DIR$/Practise_Lesson10(events)/PR10.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
       <workItem from="1703942851240" duration="8000" />
       <workItem from="1703943041138" duration="30000" />
       <workItem from="1703943663844" duration="129000" />
-      <workItem from="1704020276779" duration="3096000" />
+      <workItem from="1704020276779" duration="4558000" />
     </task>
     <task id="LOCAL-00001" summary="Add new JS folder">
       <option name="closed" value="true" />
@@ -73,7 +71,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703943757048</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="practise events">
+      <option name="closed" value="true" />
+      <created>1704027212378</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704027212378</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +88,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add new JS folder" />
     <MESSAGE value=" do home-work 12" />
-    <option name="LAST_COMMIT_MESSAGE" value=" do home-work 12" />
+    <MESSAGE value="practise events" />
+    <option name="LAST_COMMIT_MESSAGE" value="practise events" />
   </component>
 </project>
