@@ -33,6 +33,14 @@
 // count++;
 // localStorage.setItem('count', count);
 
+
+// let count = localStorage.getItem('count') || 0;
+// let blockNumber = document.createElement('div');
+// blockNumber.innerText = count;
+// document.body.appendChild(blockNumber);
+// count++;
+// localStorage.setItem('count', count);
+
 // Отримуємо останнє значення збережене в localStorage або встановлюємо 0, якщо значення відсутнє
 //let count = localStorage.getItem('count') || 0;
 //
@@ -57,34 +65,34 @@
 // побудувати дом структуру під кожну сессію
 
 
-function getCurrentDataTime() {
-    return new Date().toDateString();
-}
-
-function saveSessionInfo() {
-    let sessions = JSON.parse(localStorage.getItem('sessions')) || [];
-    sessions.push(getCurrentDataTime());
-    localStorage.setItem('sessions', JSON.stringify(sessions));
-}
-
-saveSessionInfo();
-
-function getSessions() {
-    return JSON.parse(localStorage.getItem('sessions')) || [];
-}
-
-function buildSessionsList() {
-    let sessionList = document.getElementById('sessionsList');
-    let sessions = getSessions();
-
-    sessions.forEach(function (session, index){
-        let sessionDiv = document.createElement('div');
-        sessionDiv.innerText = `Session ${index + 1} ${session}`;
-        sessionList.append(sessionDiv);
-    });
-}
-
-buildSessionsList();
+// function getCurrentDataTime() {
+//     return new Date().toDateString();
+// }
+//
+// function saveSessionInfo() {
+//     let sessions = JSON.parse(localStorage.getItem('sessions')) || [];
+//     sessions.push(getCurrentDataTime());
+//     localStorage.setItem('sessions', JSON.stringify(sessions));
+// }
+//
+// saveSessionInfo();
+//
+// function getSessions() {
+//     return JSON.parse(localStorage.getItem('sessions')) || [];
+// }
+//
+// function buildSessionsList() {
+//     let sessionList = document.getElementById('sessionsList');
+//     let sessions = getSessions();
+//
+//     sessions.forEach(function (session, index){
+//         let sessionDiv = document.createElement('div');
+//         sessionDiv.innerText = `Session ${index + 1} ${session}`;
+//         sessionList.append(sessionDiv);
+//     });
+// }
+//
+// buildSessionsList();
 // Отримання поточної дати та часу
 // function getCurrentDateTime() {
 //     return new Date().toLocaleString();
@@ -216,5 +224,26 @@ buildSessionsList();
 // localStorage.setItem('count', count);
 
 
+let target = document.getElementById('target');
+target.onclick = function (e) {
+    console.log('click');
+    console.log(e);
+}
+// target.onmousemove = function (e) {
+//     console.log(e.clientX,e.clientY);
+//     let r = e.clientX;
+//     let g = e.clientX;
+//     let b = e.clientY;
+//     this.style.background = `rgb(${r},${g},${b})`;
+// }
 
+// target.addEventListener('click', function (e){
+//     console.log('jsjsjsj');
+// });
 
+target.onmouseover = function (){
+    console.log('over');
+}
+target.onmouseleave = function () {
+    console.log('leave');
+}

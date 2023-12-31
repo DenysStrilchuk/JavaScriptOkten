@@ -22,8 +22,10 @@ fetch('http://jsonplaceholder.typicode.com/users ')
             ul.appendChild(li);
             div.appendChild(ul);
             document.body.appendChild(div);
+
         }
     })
+
 
 
 
