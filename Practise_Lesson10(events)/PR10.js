@@ -224,11 +224,11 @@
 // localStorage.setItem('count', count);
 
 
-let target = document.getElementById('target');
-target.onclick = function (e) {
-    console.log('click');
-    console.log(e);
-}
+// let target = document.getElementById('target');
+// target.onclick = function (e) {
+//     console.log('click');
+//     console.log(e);
+// }
 // target.onmousemove = function (e) {
 //     console.log(e.clientX,e.clientY);
 //     let r = e.clientX;
@@ -241,9 +241,31 @@ target.onclick = function (e) {
 //     console.log('jsjsjsj');
 // });
 
-target.onmouseover = function (){
-    console.log('over');
-}
-target.onmouseleave = function () {
-    console.log('leave');
-}
+// target.onmouseover = function (){
+//     console.log('over');
+// }
+// target.onmouseleave = function () {
+//     console.log('leave');
+// }
+//
+// let f1 = document.forms.f1;
+//
+// f1.onsubmit = function (e) {
+//     e.preventDefault();
+//     console.log('hello');
+//     let user = {name: this.userName.value};
+//     console.log(user);
+// }
+
+window.onload = function () {
+    console.log('load');
+};
+
+document.onreadystatechange = function () {
+    if (document.readyState === 'interactive') {
+        document.body.innerText = 'loading start';
+    }
+    if(document.readyState === 'complete') {
+        document.body.innerText = 'loading  finish';
+    }
+};
