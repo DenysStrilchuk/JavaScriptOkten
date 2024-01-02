@@ -2,77 +2,83 @@
 // з ендпоінту http://jsonplaceholder.typicode.com/users отримати всіх користувачів
 // вивести їх id + name списком та додати посилання з href = user-details.html?id=XXX (замість ХХХ - айді юзера)
 
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(users => {
+        // Створюємо список користувачів
+        let usersListContainer = document.getElementById('users-list');
+        let userList = document.createElement('ul');
 
+        users.forEach(user => {
+            let userId = user.id;
+            let userName = user.name;
 
-fetch('http://jsonplaceholder.typicode.com/users ')
-    .then(value => value.json())
-    .then(value => {
-        console.log(value);
-        let arr = JSON.stringify(value);
-        localStorage.setItem('users', arr);
-        for (const valueElement of value) {
-            let userId = valueElement.id;
-            let userName = valueElement.name;
-            let ul = document.createElement('ul');
-            let li = document.createElement('li');
-            let div = document.createElement('div');
-            let link = document.createElement('a');
-            link.href = `user-details.html?id=${userId}`;
-            link.innerText = `user-details.html?id=${userId}`;
-            li.innerText = `User id: ${userId}; User name: ${userName}; User link: `;
-            li.appendChild(link);
-            ul.appendChild(li);
-            div.appendChild(ul);
-            document.body.appendChild(div);
-            link.onclick = function (e) {
-                e.preventDefault();
-                let selectedUserId = parseInt(this.href.split('=')[1]);
+            // Створюємо елемент списку та посилання на докладну інформацію про користувача
+            let listItem = document.createElement('li');
+            listItem.innerText = `User id: ${userId}; User name: ${userName}; User details: `;
+            let detailsLink = document.createElement('a');
+            detailsLink.href = `user-details.html?id=${userId}`;
+            detailsLink.innerText = 'Push here';
+            listItem.appendChild(detailsLink);
 
-// Давайте розберемо кожен елемент цього рядка:
-//
-// this.href: this вказує на об'єкт, до якого відноситься поточний обробник подій (у вашому випадку, це посилання link). href - це властивість, яка містить URL-адресу посилання.
-//
-// this.href.split('='): Метод split('=') розділить рядок за знаком рівності (=) і поверне масив рядків. В нашому випадку, це буде масив, в якому перший елемент містить частину URL-адреси перед знаком рівності, а другий - після нього.
-//
-// [1]: Це індексація масиву. Після розділення за =, нам потрібен другий елемент масиву (індекс 1), який містить частину URL-адреси після =.
-//
-// parseInt(): Ця функція використовується для перетворення рядка на ціле число. Ваші параметри для parseInt() є рядком, який містить індекс URL-адреси після розділення. В результаті отримується число, яке є ідентифікатором користувача (userId).
-//
-// Отже, весь цей рядок призначений для того, щоб взяти id користувача з URL-адреси посилання, яке містить user-details.html?id=3 (наприклад). Значення 3 (або будь-яке інше число після =) перетворюється у ціле число і зберігається у змінній selectedUserId.
+            // Додаємо елемент в список
+            userList.appendChild(listItem);
+        });
 
-                let storedUsers = JSON.parse(localStorage.getItem('users'));
-                let selectedUser = storedUsers.find(u => u.id === selectedUserId);
-
-// Цей рядок коду використовує метод Array.prototype.find() для знаходження об'єкта користувача у масиві storedUsers за умовою, що значення властивості id об'єкта дорівнює selectedUserId.
-//
-// Давайте розглянемо кожен елемент цього виразу:
-//
-// storedUsers: Це масив користувачів, який ви отримали з Local Storage і раніше зберегли у змінній storedUsers.
-//
-// .find(u => u.id === selectedUserId): Це вираз використовує метод find() для пошуку першого об'єкта користувача, для якого умова u.id === selectedUserId є істинною. У цьому випадку, властивість id об'єкта u повинна дорівнювати значенню selectedUserId.
-//
-// let selectedUser = ...: Знайдений об'єкт користувача зберігається у змінній selectedUser. Таким чином, після виконання цього рядка коду в selectedUser буде міститися об'єкт користувача, який має id, що дорівнює selectedUserId.
-//
-// Отже, весь цей рядок призначений для того, щоб знайти об'єкт користувача у масиві storedUsers, який має конкретний id (визначений значенням selectedUserId).
-
-                console.log(selectedUser);
-                  let userInfo = document.getElementById('userInfo');
-                  document.body.appendChild(userInfo);
-                  userInfo.innerText = `${selectedUser}`;
-            }
-        }
+        // Додаємо список користувачів на сторінку
+        usersListContainer.appendChild(userList);
     })
-
-
-
-
-
-
-
-
-
-
+    .catch(error => console.error('Error fetching users:', error));
 
 
 // при кліку на посилання перехід на відповідну сторінку, на якій буде вся інформація про користувача (всі 15 полів)
 // отримана через додатковий запит (https://jsonplaceholder.typicode.com/users/XXX   ХХХ - айді користувача)
+
+
+
+// Отримуємо id користувача з параметрів URL
+const urlParams = new URLSearchParams(window.location.search);
+const userId = urlParams.get('id');
+
+// Виконуємо запит за деталями конкретного користувача
+fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+    .then(response => response.json())
+    .then(userDetails => {
+        // Створюємо контейнер для виведення деталей користувача
+        let userDetailsContainer = document.getElementById('user-details');
+
+        // Перевіряємо чи елемент існує перед використанням
+        if (!userDetailsContainer) {
+            userDetailsContainer = document.createElement('div');
+            userDetailsContainer.id = 'user-details';
+            document.body.appendChild(userDetailsContainer);
+        }
+
+        let detailsList = document.createElement('ul');
+
+        // Додаємо кожен параметр користувача в список
+        for (const [key, value] of Object.entries(userDetails)) {
+            let detailItem = document.createElement('li');
+             let valueJSON  = JSON.stringify(value);
+            detailItem.innerText = `${key}: ${valueJSON}`;
+            detailsList.appendChild(detailItem);
+        }
+
+        // Додаємо список деталей на сторінку
+        userDetailsContainer.appendChild(detailsList);
+    })
+    .catch(error => console.error('Error fetching user details:', error));
+
+
+
+
+
+
+
+
+
+
+
+
+
+

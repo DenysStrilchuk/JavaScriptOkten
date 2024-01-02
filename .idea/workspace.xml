@@ -4,16 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8c37d33-9b80-4fd1-9a42-936deb113d6d" name="Changes" comment="practise events">
+    <list default="true" id="a8c37d33-9b80-4fd1-9a42-936deb113d6d" name="Changes" comment="practise events and HW12">
+      <change afterPath="$PROJECT_DIR$/Lesson_12_done_homework/user-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practise_Lesson12/PR12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practise_Lesson12/PR12.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson_12_done_homework/HW12.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_12_done_homework/HW12.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson_12_done_homework/HW12.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_12_done_homework/HW12.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practise_Lesson10(events)/PR10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Practise_Lesson10(events)/PR10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practise_Lesson10(events)/PR10.js" beforeDir="false" afterPath="$PROJECT_DIR$/Practise_Lesson10(events)/PR10.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -22,25 +32,28 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2aGOvdsQhaPEexoJkB308NXAD7W" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,7 +70,8 @@
       <workItem from="1703943663844" duration="129000" />
       <workItem from="1704020276779" duration="4558000" />
       <workItem from="1704028649723" duration="17000" />
-      <workItem from="1704107470351" duration="4571000" />
+      <workItem from="1704107470351" duration="4656000" />
+      <workItem from="1704195120530" duration="4315000" />
     </task>
     <task id="LOCAL-00001" summary="Add new JS folder">
       <option name="closed" value="true" />
@@ -91,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704028655434</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="practise events and HW12">
+      <option name="closed" value="true" />
+      <created>1704113238912</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704113238912</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +123,7 @@
     <MESSAGE value="Add new JS folder" />
     <MESSAGE value=" do home-work 12" />
     <MESSAGE value="practise events" />
-    <option name="LAST_COMMIT_MESSAGE" value="practise events" />
+    <MESSAGE value="practise events and HW12" />
+    <option name="LAST_COMMIT_MESSAGE" value="practise events and HW12" />
   </component>
 </project>
