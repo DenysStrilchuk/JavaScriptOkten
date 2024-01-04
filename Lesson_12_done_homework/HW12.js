@@ -2,72 +2,53 @@
 // з ендпоінту http://jsonplaceholder.typicode.com/users отримати всіх користувачів
 // вивести їх id + name списком та додати посилання з href = user-details.html?id=XXX (замість ХХХ - айді юзера)
 
-fetch('https://jsonplaceholder.typicode.com/users')
+fetch('http://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(users => {
-        // Створюємо список користувачів
-        let usersListContainer = document.getElementById('users-list');
-        let userList = document.createElement('ul');
-
+        const usersContainer  = document.getElementById('usersContainer');
+        const usersList = document.createElement('ul');
+        usersContainer.appendChild(usersList);
         users.forEach(user => {
             let userId = user.id;
             let userName = user.name;
-
-            // Створюємо елемент списку та посилання на докладну інформацію про користувача
-            let listItem = document.createElement('li');
-            listItem.innerText = `User id: ${userId}; User name: ${userName}; User details: `;
-            let detailsLink = document.createElement('a');
-            detailsLink.href = `user-details.html?id=${userId}`;
-            detailsLink.innerText = 'Push here';
-            listItem.appendChild(detailsLink);
-
-            // Додаємо елемент в список
-            userList.appendChild(listItem);
-        });
-
-        // Додаємо список користувачів на сторінку
-        usersListContainer.appendChild(userList);
+            const evenUserList = document.createElement('li');
+            usersList.appendChild(evenUserList);
+            evenUserList.innerText = `User id: ${userId}; User name: ${userName}; User details: `;
+            const userLink = document.createElement('a');
+            userLink.href = `user-details.html?id=${userId}`;
+            userLink.innerText = 'more details';
+            evenUserList.appendChild(userLink);
+        })
     })
-    .catch(error => console.error('Error fetching users:', error));
-
 
 // при кліку на посилання перехід на відповідну сторінку, на якій буде вся інформація про користувача (всі 15 полів)
 // отримана через додатковий запит (https://jsonplaceholder.typicode.com/users/XXX   ХХХ - айді користувача)
 
+const url = new URL(location.href);
+const userId = url.searchParams.get('id');
 
-
-// Отримуємо id користувача з параметрів URL
-const urlParams = new URLSearchParams(window.location.search);
-const userId = urlParams.get('id');
-
-// Виконуємо запит за деталями конкретного користувача
 fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
     .then(response => response.json())
     .then(userDetails => {
-        // Створюємо контейнер для виведення деталей користувача
         let userDetailsContainer = document.getElementById('user-details');
 
-        // Перевіряємо чи елемент існує перед використанням
-        if (!userDetailsContainer) {
-            userDetailsContainer = document.createElement('div');
+        if(!userDetailsContainer) {
+            let userDetailsContainer = document.createElement('div');
             userDetailsContainer.id = 'user-details';
             document.body.appendChild(userDetailsContainer);
         }
 
         let detailsList = document.createElement('ul');
 
-        // Додаємо кожен параметр користувача в список
         for (const [key, value] of Object.entries(userDetails)) {
             let detailItem = document.createElement('li');
-             let valueJSON  = JSON.stringify(value);
+            let valueJSON  = JSON.stringify(value);
             detailItem.innerText = `${key}: ${valueJSON}`;
             detailsList.appendChild(detailItem);
         }
 
-        // Додаємо список деталей на сторінку
         userDetailsContainer.appendChild(detailsList);
     })
-    .catch(error => console.error('Error fetching user details:', error));
 
 
 
