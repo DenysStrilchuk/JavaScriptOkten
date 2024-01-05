@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8c37d33-9b80-4fd1-9a42-936deb113d6d" name="Changes" comment="practise events Lesson 10">
-      <change afterPath="$PROJECT_DIR$/Practise_Lesson12/user.PR12.html" afterDir="false" />
+    <list default="true" id="a8c37d33-9b80-4fd1-9a42-936deb113d6d" name="Changes" comment="Do Home-Work Lesson12">
+      <change afterPath="$PROJECT_DIR$/Practise/PR12/details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practise/PR12/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practise/PR12/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_12_done_homework/HW12.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_12_done_homework/HW12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_12_done_homework/HW12.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_12_done_homework/HW12.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_12_done_homework/user-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_12_done_homework/user-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practise_Lesson12/PR12.html" beforeDir="false" afterPath="$PROJECT_DIR$/Practise_Lesson12/PR12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practise_Lesson12/PR12.js" beforeDir="false" afterPath="$PROJECT_DIR$/Practise_Lesson12/PR12.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practise_Lesson10(events)/PR10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Practise_Lesson10(events)/PR10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practise_Lesson10(events)/PR10.js" beforeDir="false" afterPath="$PROJECT_DIR$/Practise_Lesson10(events)/PR10.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,10 @@
       <workItem from="1704229296876" duration="19000" />
       <workItem from="1704237668625" duration="2580000" />
       <workItem from="1704283901035" duration="384000" />
-      <workItem from="1704364797714" duration="7172000" />
+      <workItem from="1704364797714" duration="7482000" />
+      <workItem from="1704382786372" duration="1882000" />
+      <workItem from="1704386134853" duration="35000" />
+      <workItem from="1704456015387" duration="6589000" />
     </task>
     <task id="LOCAL-00001" summary="Add new JS folder">
       <option name="closed" value="true" />
@@ -150,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704240311795</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Do Home-Work Lesson12">
+      <option name="closed" value="true" />
+      <created>1704373612169</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704373612169</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +173,7 @@
     <MESSAGE value="practise events and HW12" />
     <MESSAGE value="do home-work Lesson12" />
     <MESSAGE value="practise events Lesson 10" />
-    <option name="LAST_COMMIT_MESSAGE" value="practise events Lesson 10" />
+    <MESSAGE value="Do Home-Work Lesson12" />
+    <option name="LAST_COMMIT_MESSAGE" value="Do Home-Work Lesson12" />
   </component>
 </project>

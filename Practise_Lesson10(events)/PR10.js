@@ -320,25 +320,47 @@
 // та вивести об'єкт в документ. Іншими словами : заповниои форму, натиснули кнопку, під формою з'явився блок з вашим
 // об'єктом
 
-let usersArr = [];
-let form = document.forms['f1'];
-form.onsubmit = function(e) {
-    e.preventDefault();
-    let name = this.name.value;
-    let surname = this.surname.value;
-    let age = this.age.value;
-    console.log({name,surname,age});
-    usersArr.push({name, surname, age});
-}
-let btn = document.getElementById('btn-show');
-btn.onclick = function (){
-    for (const user of usersArr) {
-        let div = document.createElement('div');
-        div.innerText = `${user.name} ${user.surname} ${user.age}`;
-        document.body.appendChild(div);
-    }
+// let usersArr = [];
+// let form = document.forms['f1'];
+// form.onsubmit = function(e) {
+//     e.preventDefault();
+//     let name = this.name.value;
+//     let surname = this.surname.value;
+//     let age = this.age.value;
+//     console.log({name,surname,age});
+//     usersArr.push({name, surname, age});
+// }
+// let btn = document.getElementById('btn-show');
+// btn.onclick = function (){
+//     for (const user of usersArr) {
+//         let div = document.createElement('div');
+//         div.innerText = `${user.name} ${user.surname} ${user.age}`;
+//         document.body.appendChild(div);
+//     }
+// }
+
+// є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код, який при кожному перезавантажені сторінки буде
+// додавати до неї +1
+
+// let block = document.createElement('div');
+// let countItem = localStorage.getItem('count') || 0;
+// block.innerText = countItem;
+// countItem++;
+// document.body.appendChild(block);
+// localStorage.setItem('count', countItem);
+
+// Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховще, в масив sessions зберігається
+// інформація про дату та час відвідування сторінки. Є ще сторінка sessions.html (назва довільна), при відвідуванні
+// якої потрібно відмалювати всю інформацію про відвідування сторінки index.html. Інфу НЕ виводити в консоль, а
+// побудувати дом структуру під кожну сессію
+
+
+function getDate() {
+    new Date().toString();
 }
 
+date = getDate();
+console.log(date);
 
 
 

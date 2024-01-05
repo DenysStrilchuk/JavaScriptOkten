@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>DETAILS</title>
+    </head>
+    <body>
+    <h1>Details page</h1>
+
+    <script>
+        let url = new URL(location.href);
+       // console.log(url);
+        let user = JSON.parse(url.searchParams.get('userID'));
+       // console.log(user);
+        let ul = document.createElement('ul');
+        document.body.appendChild(ul);
+        for (const key in user) {
+            console.log(key,user[key]);
+            let li = document.createElement('li');
+            li.innerText = `${JSON.stringify(user[key])}`;
+            ul.appendChild(li);
+        }
+    </script>
+    </body>
+</html>
