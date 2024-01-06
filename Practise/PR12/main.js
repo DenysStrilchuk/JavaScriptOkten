@@ -36,17 +36,40 @@ fetch(url).then(response => response.json()).then(({products:items})=> {
     console.log(items);
     items.forEach(item => {
         console.log(item);
+
         let p = document.createElement('p');
+        p.classList.add('pStyle');
+        p.innerText = `${item.id} - ${item.title}`;
+
         let btn = document.createElement('button');
         btn.classList.add('btnStyle');
-        //p.innerText = `${item.id} - ${item.name}`;
-        p.innerText = `${item.id} - ${item.title}`;
         btn.innerText = 'DETAILS';
-        div.append(p,btn);
+        //p.innerText = `${item.id} - ${item.name}`;
+
+
+
+        let btnDel = document.createElement('button');
+        btnDel.classList.add('btnDel');
+        btnDel.innerText = 'DELETE';
+
+        div.append(p,btn,btnDel);
+
         btn.addEventListener('click',() => {
             document.location.href = 'details.html?userID=' + JSON.stringify(item);
         })
+
+        btnDel.addEventListener('click',() => {
+            deleted(item.id);
+            p.style.display = 'none';
+            btn.style.display = 'none';
+            btnDel.style.display = 'none';
+        })
     })
-    })
+    function deleted(id) {
+        fetch(url+'/'+id).then(response => response.json()).then(value => {
+            console.log('DELETED: ', value);
+        })
+    }
+})
 
 
