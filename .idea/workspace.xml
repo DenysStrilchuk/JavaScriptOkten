@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8c37d33-9b80-4fd1-9a42-936deb113d6d" name="Changes" comment="practise">
+    <list default="true" id="a8c37d33-9b80-4fd1-9a42-936deb113d6d" name="Changes" comment="practise LS12">
+      <change afterPath="$PROJECT_DIR$/Practise/JS_Practise/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practise/JS_Practise/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practise/JS_Practise/post-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practise/JS_Practise/post-details.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practise/JS_Practise/user-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practise/JS_Practise/userDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practise/PR12/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Practise/PR12/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practise/PR12/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Practise/PR12/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -77,7 +81,9 @@
       <workItem from="1704386134853" duration="35000" />
       <workItem from="1704456015387" duration="6688000" />
       <workItem from="1704488854975" duration="964000" />
-      <workItem from="1704544880343" duration="2080000" />
+      <workItem from="1704544880343" duration="2511000" />
+      <workItem from="1704975885021" duration="8000" />
+      <workItem from="1704975898592" duration="10554000" />
     </task>
     <task id="LOCAL-00001" summary="Add new JS folder">
       <option name="closed" value="true" />
@@ -175,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704490103149</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="practise LS12">
+      <option name="closed" value="true" />
+      <created>1704547463251</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1704547463251</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +204,7 @@
     <MESSAGE value="practise events Lesson 10" />
     <MESSAGE value="Do Home-Work Lesson12" />
     <MESSAGE value="practise" />
-    <option name="LAST_COMMIT_MESSAGE" value="practise" />
+    <MESSAGE value="practise LS12" />
+    <option name="LAST_COMMIT_MESSAGE" value="practise LS12" />
   </component>
 </project>
