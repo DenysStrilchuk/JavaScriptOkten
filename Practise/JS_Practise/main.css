@@ -1,0 +1,17 @@
+.title {
+    display: flex;
+    justify-content: center;
+}
+.usersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.userBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+}

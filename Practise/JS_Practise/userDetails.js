@@ -8,21 +8,30 @@
 const url = new URL(location.href);
 const userDetails = JSON.parse(url.searchParams.get('userId'));
 
-const div = document.createElement('div')
+const div = document.createElement('div');
 document.body.appendChild(div);
 
-for (const userKey in userDetails) {
-    const p = document.createElement('p');
-    const userValue = userDetails[userKey];
+const h2 = document.createElement('h2');
+h2.innerText = 'User details';
+div.appendChild(h2);
 
-    if(typeof userValue === 'object' && userValue !== null) {
-       p.innerText = `${userKey} - ${JSON.stringify(userValue)}`;
-    } else {
-        p.innerText = `${userKey} - ${userValue}`;
+function iterateObject(obj) {
+    for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            const value = obj[key];
+            const p = document.createElement('p');
+
+            if (typeof value === 'object' && value !== null) {
+                iterateObject(value);
+            } else {
+                p.innerText = `${key}: ${value}`;
+            }
+            div.appendChild(p);
+        }
     }
-
-    div.appendChild(p);
 }
+
+iterateObject(userDetails);
 
 const btn = document.createElement('button');
 btn.innerText = 'post of current user';
@@ -32,7 +41,6 @@ btn.addEventListener('click', () => {
         .then(response => response.json())
         .then(values => {
             values.forEach((value) => {
-                console.log(value);
                 const titlePosts = document.createElement('div');
                 titlePosts.innerText = `Title: ${value.title} - `;
                 div.appendChild(titlePosts);

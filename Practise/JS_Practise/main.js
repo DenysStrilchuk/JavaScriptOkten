@@ -13,19 +13,27 @@
 //     Всі елементи котрі характеризують users, posts, comments візуалізувати, так, щоб було видно що це блоки (
 //     дати фон. марджини і тд)
 
+const h2 = document.createElement('h2');
+h2.classList.add('title');
+h2.innerText = 'Users';
+document.body.appendChild(h2);
+
 let url = new URL('https://jsonplaceholder.typicode.com/users');
 fetch(url).then(response => response.json()).then(values => {
-    console.log(values);
+    const usersContainer = document.createElement('div');
+    usersContainer.classList.add('usersContainer');
+    document.body.appendChild(usersContainer);
 
     values.forEach((value) => {
         const userId = value.id;
         const userName = value.name;
 
-        const p = document.createElement('p');
-        p.innerText = `${userId} - ${userName}`;
+        const userBlock = document.createElement('div');
+        userBlock.classList.add('userBlock');
 
-        const div = document.createElement('div');
-        document.body.appendChild(div);
+        const userInfo = document.createElement('p');
+        userInfo.classList.add('userInfo')
+        userInfo.innerText = `${userId} - ${userName}`;
 
         const btn = document.createElement('button');
         btn.innerText = 'user-details';
@@ -34,7 +42,9 @@ fetch(url).then(response => response.json()).then(values => {
             document.location.href = 'user-details.html?userId=' + JSON.stringify(value);
         })
 
-        div.append(p, btn);
+
+        userBlock.append(userInfo, btn);
+        usersContainer.appendChild(userBlock);
 
     })
 })

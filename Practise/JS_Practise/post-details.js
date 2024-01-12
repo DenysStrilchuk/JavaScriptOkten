@@ -5,8 +5,14 @@
 
 const url = new URL(location.href);
 const postDetails = JSON.parse(url.searchParams.get('posts'));
+
 const divDetails = document.createElement('div');
 document.body.appendChild(divDetails);
+
+const h2 = document.createElement('h2');
+h2.innerText = 'Post details';
+
+divDetails.appendChild(h2);
 
 for (const postDetailsKey in postDetails) {
     const p = document.createElement('p');
