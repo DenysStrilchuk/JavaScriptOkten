@@ -13,10 +13,10 @@
 //     Всі елементи котрі характеризують users, posts, comments візуалізувати, так, щоб було видно що це блоки (
 //     дати фон. марджини і тд)
 
-const h2 = document.createElement('h2');
-h2.classList.add('title');
-h2.innerText = 'Users';
-document.body.appendChild(h2);
+const h1 = document.createElement('h1');
+h1.classList.add('title');
+h1.innerText = 'Users';
+document.body.appendChild(h1);
 
 let url = new URL('https://jsonplaceholder.typicode.com/users');
 fetch(url).then(response => response.json()).then(values => {
@@ -36,6 +36,7 @@ fetch(url).then(response => response.json()).then(values => {
         userInfo.innerText = `${userId} - ${userName}`;
 
         const btn = document.createElement('button');
+        btn.classList.add('btn');
         btn.innerText = 'user-details';
 
         btn.addEventListener('click',function() {

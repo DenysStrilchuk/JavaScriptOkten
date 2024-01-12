@@ -8,47 +8,62 @@
 const url = new URL(location.href);
 const userDetails = JSON.parse(url.searchParams.get('userId'));
 
+const title = document.createElement('h1');
+title.classList.add('title');
+title.innerText = 'User details';
+document.body.appendChild(title);
+
 const div = document.createElement('div');
+div.classList.add('userInfoBlock');
 document.body.appendChild(div);
 
-const h2 = document.createElement('h2');
-h2.innerText = 'User details';
-div.appendChild(h2);
 
 function iterateObject(obj) {
     for (const key in obj) {
         if (obj.hasOwnProperty(key)) {
-            const value = obj[key];
-            const p = document.createElement('p');
+            const userDetails = obj[key];
+            const userPar = document.createElement('p');
+            userPar.classList.add('userPar');
 
-            if (typeof value === 'object' && value !== null) {
-                iterateObject(value);
+            if (typeof userDetails === 'object' && userDetails !== null) {
+                iterateObject(userDetails);
             } else {
-                p.innerText = `${key}: ${value}`;
+                userPar.innerText = `${key}: ${userDetails}`;
             }
-            div.appendChild(p);
+            div.appendChild(userPar);
         }
     }
 }
 
 iterateObject(userDetails);
 
+const buttonBlock = document.createElement('div');
+buttonBlock.classList.add('buttonBlock');
+document.body.appendChild(buttonBlock);
+
+const titleBlock = document.createElement('div');
+titleBlock.classList.add('titleBlock');
+document.body.appendChild(titleBlock);
+
 const btn = document.createElement('button');
+btn.classList.add('btn');
 btn.innerText = 'post of current user';
-div.appendChild(btn);
+buttonBlock.appendChild(btn);
 btn.addEventListener('click', () => {
     fetch(`https://jsonplaceholder.typicode.com/users/${userDetails.id}/posts`)
         .then(response => response.json())
         .then(values => {
             values.forEach((value) => {
-                const titlePosts = document.createElement('div');
+                const titlePosts = document.createElement('p');
+                titlePosts.classList.add('titlePosts');
                 titlePosts.innerText = `Title: ${value.title} - `;
-                div.appendChild(titlePosts);
+                titleBlock.appendChild(titlePosts);
 
                 const postLink = document.createElement('a');
                 postLink.href = 'post-details.html?posts=' + JSON.stringify(value);
                 postLink.innerText = 'click for details';
                 titlePosts.appendChild(postLink);
+                btn.style.display = 'none';
             })
         })
 })
