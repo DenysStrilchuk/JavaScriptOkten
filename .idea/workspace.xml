@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8c37d33-9b80-4fd1-9a42-936deb113d6d" name="Changes" comment="do practise tasks with mini project JS">
-      <change afterPath="$PROJECT_DIR$/Practise/JS_Practise/post-details.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Practise/JS_Practise/userDetails.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practise/Recursion practise/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practise/Recursion practise/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practise/Recursion practise/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practise/JS_Practise/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Practise/JS_Practise/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practise/JS_Practise/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Practise/JS_Practise/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Practise/JS_Practise/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Practise/JS_Practise/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practise/JS_Practise/post-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/Practise/JS_Practise/post-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Practise/JS_Practise/post-details.js" beforeDir="false" afterPath="$PROJECT_DIR$/Practise/JS_Practise/post-details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practise/JS_Practise/user-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/Practise/JS_Practise/user-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Practise/JS_Practise/userDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/Practise/JS_Practise/userDetails.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +89,8 @@
       <workItem from="1704975898592" duration="10752000" />
       <workItem from="1705008656947" duration="439000" />
       <workItem from="1705041499732" duration="5745000" />
-      <workItem from="1705058230042" duration="9670000" />
+      <workItem from="1705058230042" duration="9982000" />
+      <workItem from="1705145917188" duration="3938000" />
     </task>
     <task id="LOCAL-00001" summary="Add new JS folder">
       <option name="closed" value="true" />
@@ -212,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705047537345</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="do practise tasks with mini project JS">
+      <option name="closed" value="true" />
+      <created>1705077883961</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1705077883961</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

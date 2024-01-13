@@ -1,10 +1,3 @@
-// На странице user-details.html:
-// 4 Вивести всю, без виключення, інформацію про об'єкт user на який клікнули
-// 5 Додати кнопку "post of current user", при кліку на яку, з'являються title всіх постів поточного юзера
-// (для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
-//     6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html,
-//     котра має детальну інфу про поточний пост.
-
 const url = new URL(location.href);
 const userDetails = JSON.parse(url.searchParams.get('userId'));
 
@@ -49,6 +42,7 @@ const btn = document.createElement('button');
 btn.classList.add('btn');
 btn.innerText = 'post of current user';
 buttonBlock.appendChild(btn);
+
 btn.addEventListener('click', () => {
     fetch(`https://jsonplaceholder.typicode.com/users/${userDetails.id}/posts`)
         .then(response => response.json())
@@ -62,7 +56,9 @@ btn.addEventListener('click', () => {
                 const postLink = document.createElement('a');
                 postLink.href = 'post-details.html?posts=' + JSON.stringify(value);
                 postLink.innerText = 'click for details';
+
                 titlePosts.appendChild(postLink);
+
                 btn.style.display = 'none';
             })
         })
