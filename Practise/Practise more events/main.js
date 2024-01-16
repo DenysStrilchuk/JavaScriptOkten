@@ -44,10 +44,47 @@ localStorage.setItem('date',dateToJSON);
 // при завантажені сторінки з'являються перші 10 об'єктів.
 //     При натисканні next виводяться настпні 10 об'єктів
 // При натисканні prev виводяться попередні 10 об'єктів
-//
-//
-//
-//
+
+const arr = [];
+
+for (let i = 0; i < 100; i++) {
+    let obj = {name: `name${i}`, age: 10 + i, email: `name@${i}.com`};
+    arr.push(obj);
+}
+
+const arrBlock = document.createElement('div');
+document.body.appendChild(arrBlock);
+
+const btnNext = document.createElement('button');
+btnNext.innerText = 'next';
+
+const btnPrev = document.createElement('button');
+btnPrev.innerText = 'prev';
+
+ localStorage.setItem('newArr', JSON.stringify(arr));
+
+  let getStorage = JSON.parse(localStorage.getItem('newArr'));
+console.log(getStorage);
+
+let partObj = getStorage.slice(0,10);
+
+let toString  = JSON.stringify(partObj);
+
+let p = document.createElement('p');
+p.innerText = `${toString}`;
+
+
+console.log(partObj);
+
+arrBlock.append(p, btnNext, btnPrev);
+
+btnNext.addEventListener('click', () => {
+
+})
+
+
+
+
 // - Створити довільний елемент з id = text та створити кнопку.Використовуючи JavaScript, зробіть так, щоб при
 // натисканні на кнопку зникав елемент з id="text".
 //
