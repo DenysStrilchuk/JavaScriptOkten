@@ -54,6 +54,8 @@ for (let i = 0; i < 100; i++) {
 
 const arrBlock = document.createElement('div');
 document.body.appendChild(arrBlock);
+const btnBlock = document.createElement('div');
+document.body.appendChild(btnBlock);
 
 const btnNext = document.createElement('button');
 btnNext.innerText = 'next';
@@ -61,38 +63,79 @@ btnNext.innerText = 'next';
 const btnPrev = document.createElement('button');
 btnPrev.innerText = 'prev';
 
- localStorage.setItem('newArr', JSON.stringify(arr));
+function getTenObj(startIndex) {
+    arrBlock.innerText = '';
+    for (let i = startIndex; i < startIndex + 10; i++) {
+        let obj = arr[i];
+        let objDiv = document.createElement('div');
+        objDiv.innerText = JSON.stringify(obj);
+        arrBlock.appendChild(objDiv);
+    }
+}
 
-  let getStorage = JSON.parse(localStorage.getItem('newArr'));
-console.log(getStorage);
+getTenObj(0);
 
-let partObj = getStorage.slice(0,10);
+btnBlock.append(btnPrev, btnNext);
 
-let toString  = JSON.stringify(partObj);
-
-let p = document.createElement('p');
-p.innerText = `${toString}`;
-
-
-console.log(partObj);
-
-arrBlock.append(p, btnNext, btnPrev);
+let currentIndex = 0;
 
 btnNext.addEventListener('click', () => {
+    if (currentIndex + 10 < arr.length) {
+        currentIndex += 10;
+        getTenObj(currentIndex);
+    }
+});
 
-})
-
+btnPrev.addEventListener('click', () => {
+    if (currentIndex - 10 >= 0) {
+        currentIndex -= 10;
+        getTenObj(currentIndex);
+    }
+});
 
 
 
 // - Створити довільний елемент з id = text та створити кнопку.Використовуючи JavaScript, зробіть так, щоб при
 // натисканні на кнопку зникав елемент з id="text".
-//
-//
+
+const textDiv = document.createElement('div');
+document.body.appendChild(textDiv);
+
+let  h1 = document.createElement('h1');
+h1.id = 'text';
+h1.innerText = 'I put here some TEXT';
+textDiv.appendChild(h1);
+
+const btnForText =  document.createElement('button');
+btnForText.innerText = 'hide text';
+
+const btnForTextDiv  = document.createElement('div');
+document.body.appendChild(btnForTextDiv);
+
+btnForTextDiv.appendChild(btnForText);
+
+let idElement = document.getElementById('text');
+btnForText.addEventListener('click', () => {
+    idElement.style.display = 'none';
+})
+
 //     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати
 //     інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
-//
-//
+
+let btnAge = document.getElementById('confirmAge');
+let pAge = document.getElementById('ageText');
+
+btnAge.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    let age = document.getElementsByName('age')[1].value;
+        if (age < 18) {
+            pAge.innerText = 'Your  age is smaller then 18';
+        } else {
+            pAge.innerText = 'Your age is acceptable';
+        }
+})
+
+
 // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
