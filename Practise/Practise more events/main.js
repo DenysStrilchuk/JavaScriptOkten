@@ -139,7 +139,32 @@ btnAge.addEventListener('click', (ev) => {
 // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
-//
+
+const numberOfLines = document.getElementById('form3').elements.numberOfLines;
+const numberOfColumns = document.getElementById('form3').elements.numberOfColumns;
+const linesContent = document.getElementById('form3').elements.linesContent;
+const btnCreate = document.getElementById('btnCreateTable');
+function generateTable() {
+    let table = "<table style='border: 1px solid black;'>";
+    for (let i = 0; i < numberOfLines.value; i++) {
+        table += "<tr style='border: 1px solid black;'>";
+        for (let j = 0; j < numberOfColumns.value; j++) {
+            table += "<td style='border: 1px solid black;'>" + linesContent.value + '</td>';
+        }
+        table += '</tr>';
+    }
+    table += '</table>';
+    document.getElementById('tableContainer').innerHTML = table;
+}
+
+btnCreate.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    generateTable();
+})
+
+
+
+
 // *** (подібне було вище, але...будьте уважні в другій частині) створити сторінку з довільним блоком, в середині
 // якого є значення "100грн"
 // при перезавантаженні сторінки до значаення додається по 10грн, але !!!
