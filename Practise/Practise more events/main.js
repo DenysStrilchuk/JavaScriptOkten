@@ -163,10 +163,29 @@ btnCreate.addEventListener('click', (ev) => {
 })
 
 
-
-
 // *** (подібне було вище, але...будьте уважні в другій частині) створити сторінку з довільним блоком, в середині
 // якого є значення "100грн"
 // при перезавантаженні сторінки до значаення додається по 10грн, але !!!
 //     зміна ціни відбувається тільки на перезавантаження, які відбулись пізніше ніж 10 секунд після попереднього.
 //     При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд - нічого не відбувається
+
+const moneyDiv = document.createElement('div');
+document.body.appendChild(moneyDiv);
+
+let money = localStorage.getItem('mon') || 100;
+let lastUpdateTime = localStorage.getItem('lastUpdateTime') || 0;
+function makeMoney() {
+    const currentTime = Date.now();
+    const elapsedTime = currentTime - lastUpdateTime;
+
+    if (elapsedTime > 10000) {
+        money = parseInt(money) + 10;
+        localStorage.setItem('mon', money);
+        moneyDiv.innerText = `${money} hrn`;
+        localStorage.setItem('lastUpdateTime', currentTime);
+    }
+
+    setTimeout(makeMoney,10000);
+}
+
+makeMoney();
