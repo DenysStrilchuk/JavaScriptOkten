@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8c37d33-9b80-4fd1-9a42-936deb113d6d" name="Changes" comment="practise events">
+    <list default="true" id="a8c37d33-9b80-4fd1-9a42-936deb113d6d" name="Changes" comment="practise events (don't  work last task, need fix)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Practise/Practise more events/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Practise/Practise more events/main.js" afterDir="false" />
     </list>
@@ -97,7 +97,8 @@
       <workItem from="1705922749009" duration="6534000" />
       <workItem from="1706098633096" duration="3662000" />
       <workItem from="1706128120084" duration="2297000" />
-      <workItem from="1706130666391" duration="3000" />
+      <workItem from="1706130666391" duration="67000" />
+      <workItem from="1706175616439" duration="1231000" />
     </task>
     <task id="LOCAL-00001" summary="Add new JS folder">
       <option name="closed" value="true" />
@@ -283,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706103259371</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="practise events (don't  work last task, need fix)">
+      <option name="closed" value="true" />
+      <created>1706130717676</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1706130717676</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +312,7 @@
     <MESSAGE value="practise recursion" />
     <MESSAGE value="change folder  location" />
     <MESSAGE value="practise events" />
-    <option name="LAST_COMMIT_MESSAGE" value="practise events" />
+    <MESSAGE value="practise events (don't  work last task, need fix)" />
+    <option name="LAST_COMMIT_MESSAGE" value="practise events (don't  work last task, need fix)" />
   </component>
 </project>

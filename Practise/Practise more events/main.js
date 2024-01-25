@@ -169,23 +169,52 @@ btnCreate.addEventListener('click', (ev) => {
 //     зміна ціни відбувається тільки на перезавантаження, які відбулись пізніше ніж 10 секунд після попереднього.
 //     При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд - нічого не відбувається
 
+// const moneyDiv = document.createElement('div');
+// document.body.appendChild(moneyDiv);
+//
+// let money = JSON.parse(localStorage.getItem('mon')) || 100;
+// let lastUpdateTime = JSON.parse(localStorage.getItem('lastUpdateTime')) || Date.now();
+//
+// function makeMoney() {
+//     const currentTime = Date.now();
+//     const elapsedTime = currentTime - lastUpdateTime;
+//
+//     if (elapsedTime > 10000) {
+//         money = parseInt(money) + 10;
+//         localStorage.setItem('mon', JSON.stringify(money));
+//         moneyDiv.innerText = `${money} грн`;
+//         localStorage.setItem('lastUpdateTime', JSON.stringify(currentTime));
+//     }
+//
+//     setTimeout(makeMoney, 10000);
+// }
+//
+// makeMoney();
+
 const moneyDiv = document.createElement('div');
 document.body.appendChild(moneyDiv);
 
-let money = localStorage.getItem('mon') || 100;
-let lastUpdateTime = localStorage.getItem('lastUpdateTime') || 0;
-function makeMoney() {
+let money = JSON.parse(localStorage.getItem('mon')) || 100;
+let lastUpdateTime = JSON.parse(localStorage.getItem('lastUpdateTime')) || Date.now();
+
+window.onload = function makeMoney() {
     const currentTime = Date.now();
     const elapsedTime = currentTime - lastUpdateTime;
 
     if (elapsedTime > 10000) {
         money = parseInt(money) + 10;
-        localStorage.setItem('mon', money);
-        moneyDiv.innerText = `${money} hrn`;
-        localStorage.setItem('lastUpdateTime', currentTime);
+        localStorage.setItem('mon', JSON.stringify(money));
+        moneyDiv.innerText = `${money} грн`;
+        lastUpdateTime = currentTime;
+        localStorage.setItem('lastUpdateTime', JSON.stringify(lastUpdateTime));
+    } else {
+        money  = parseInt(money);
+        moneyDiv.innerText = `${money} грн`;
     }
 
-    setTimeout(makeMoney,10000);
+    setTimeout(makeMoney, 10000);
 }
 
-makeMoney();
+
+
+
