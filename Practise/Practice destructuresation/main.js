@@ -32,3 +32,9 @@ function openArr() {
 
 openArr();
 
+
+//operator Spread
+let newArr = {...someArr};
+console.log(newArr  === someArr);
+console.log(newArr[1]  === someArr[1]);
+
