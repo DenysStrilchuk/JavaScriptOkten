@@ -104,6 +104,8 @@
       <workItem from="1706773761325" duration="47000" />
       <workItem from="1706780534330" duration="34000" />
       <workItem from="1706780573271" duration="6000" />
+      <workItem from="1706780808561" duration="174000" />
+      <workItem from="1706782852746" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="Add new JS folder">
       <option name="closed" value="true" />
@@ -321,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706274042072</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="practise destructuresation">
+      <option name="closed" value="true" />
+      <created>1706780962742</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1706780962742</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
